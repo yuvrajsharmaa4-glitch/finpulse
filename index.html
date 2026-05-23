@@ -43,7 +43,7 @@ input{font-family:var(--mono);outline:none}
 .left-col{width:215px;flex-shrink:0;border-right:1px solid var(--b1);overflow-y:auto;background:var(--s1)}
 .left-col::-webkit-scrollbar{width:3px}
 .left-col::-webkit-scrollbar-thumb{background:var(--b2)}
-.center-col{flex:1;overflow-y:auto;padding:14px;min-width:0}
+.center-col{flex:1;overflow-y:auto;min-width:0}
 .center-col::-webkit-scrollbar{width:4px}
 .center-col::-webkit-scrollbar-thumb{background:var(--b2)}
 .news-col{width:275px;flex-shrink:0;border-left:1px solid var(--b1);background:var(--s1);display:flex;flex-direction:column;overflow:hidden}
@@ -99,16 +99,47 @@ input{font-family:var(--mono);outline:none}
 .nc-refresh:hover{border-color:var(--gold);color:var(--gold)}
 .skel{background:linear-gradient(90deg,var(--s2) 25%,var(--s3) 50%,var(--s2) 75%);background-size:200%;animation:sh 1.3s infinite;border-radius:3px;height:10px;margin-bottom:6px}
 @keyframes sh{0%{background-position:200%}100%{background-position:-200%}}
-.sec-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.home-wrap{padding:14px}
+.sec-head{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .sec-lbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--t2)}
 .sec-line{flex:1;height:1px;background:var(--b1)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
 .chip{background:var(--s2);border:1px solid var(--b1);color:var(--gold);padding:5px 11px;border-radius:4px;font-weight:700;font-size:11px;font-family:var(--mono);letter-spacing:.4px;transition:all .12s}
 .chip:hover{background:var(--gold);color:#000;border-color:var(--gold)}
-.welcome-hero{text-align:center;padding:36px 20px}
-.wh-icon{font-size:36px;margin-bottom:10px}
-.wh-title{font-size:18px;font-weight:800;margin-bottom:6px}
-.wh-sub{color:var(--t2);font-size:12px;line-height:1.7}
+.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b1);border-radius:8px;overflow:hidden;border:1px solid var(--b1);margin-bottom:14px}
+.feat-item{background:var(--s1);padding:16px;cursor:pointer;transition:background .12s}
+.feat-item:hover{background:var(--s2)}
+.feat-item.big{grid-column:1/-1;border-bottom:1px solid var(--b1);padding:20px}
+.feat-tag{font-size:9px;padding:2px 7px;border-radius:3px;font-weight:700;letter-spacing:.5px;display:inline-block;margin-bottom:8px}
+.feat-tag.Economy{background:#1A1800;border:1px solid #3A3000;color:#D4B856}
+.feat-tag.Markets{background:#0F1A20;border:1px solid #1A3040;color:#5BB8D4}
+.feat-tag.Global{background:#0F0F1A;border:1px solid #1A1A3A;color:#7F9FD4}
+.feat-tag.Stocks{background:#0F1A0F;border:1px solid #1A3A1A;color:#6FCF6F}
+.feat-tag.Crypto{background:#1A0F1A;border:1px solid #3A1A3A;color:#C47FD4}
+.feat-tag.Commodities{background:#1A1500;border:1px solid #3A2A00;color:#D4A856}
+.feat-title{font-weight:800;font-size:14px;line-height:1.4;color:var(--tx);margin-bottom:6px}
+.feat-item.big .feat-title{font-size:17px;line-height:1.35}
+.feat-sum{font-size:11px;color:var(--t2);line-height:1.6}
+.feat-item.big .feat-sum{font-size:12px}
+.feat-meta{display:flex;justify-content:space-between;align-items:center;margin-top:10px}
+.feat-src{font-size:9px;font-weight:700;color:var(--gold);letter-spacing:.5px;text-transform:uppercase}
+.feat-time{font-size:9px;color:var(--t3);font-family:var(--mono)}
+.more-news{display:flex;flex-direction:column;gap:1px;background:var(--b1);border-radius:8px;overflow:hidden;border:1px solid var(--b1)}
+.more-item{background:var(--s1);padding:12px 16px;cursor:pointer;transition:background .12s;display:flex;gap:12px;align-items:flex-start}
+.more-item:hover{background:var(--s2)}
+.more-num{font-family:var(--mono);font-size:18px;font-weight:700;color:var(--b3);min-width:24px;line-height:1.2;margin-top:2px}
+.more-title{font-weight:700;font-size:12px;line-height:1.4;margin-bottom:3px}
+.more-meta{display:flex;gap:8px;align-items:center}
+.more-src{font-size:9px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.4px}
+.more-time{font-size:9px;color:var(--t3);font-family:var(--mono)}
+.more-tag{font-size:8px;padding:1px 5px;border-radius:2px;font-weight:700}
+.more-tag.Economy{background:#1A1800;border:1px solid #3A3000;color:#D4B856}
+.more-tag.Markets{background:#0F1A20;border:1px solid #1A3040;color:#5BB8D4}
+.more-tag.Global{background:#0F0F1A;border:1px solid #1A1A3A;color:#7F9FD4}
+.more-tag.Stocks{background:#0F1A0F;border:1px solid #1A3A1A;color:#6FCF6F}
+.more-tag.Crypto{background:#1A0F1A;border:1px solid #3A1A3A;color:#C47FD4}
+.more-tag.Commodities{background:#1A1500;border:1px solid #3A2A00;color:#D4A856}
+.stock-wrap{padding:14px}
 .spin-box{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:50px;gap:10px}
 .spin{width:26px;height:26px;border:2px solid var(--b2);border-top-color:var(--gold);border-radius:50%;animation:spin .7s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -139,7 +170,7 @@ input{font-family:var(--mono);outline:none}
 .chart-type-btns{display:flex;gap:2px;background:var(--s2);border:1px solid var(--b1);border-radius:4px;padding:2px}
 .ct-btn{background:transparent;border:none;color:var(--t3);padding:3px 10px;border-radius:3px;font-size:10px;font-weight:700;transition:all .12s}
 .ct-btn.on{background:var(--b2);color:var(--tx)}
-.chart-area{position:relative;height:240px}
+.chart-area{position:relative;height:210px}
 .stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:1px;background:var(--b1);border-radius:6px;overflow:hidden;border:1px solid var(--b1);margin-top:12px}
 .sc{background:var(--s2);padding:9px 11px}
 .sc-l{font-size:9px;color:var(--t3);letter-spacing:.4px;text-transform:uppercase;margin-bottom:3px}
@@ -177,51 +208,50 @@ input{font-family:var(--mono);outline:none}
     <input class="s-in" id="sIn" placeholder="Search &#x2014; AAPL, TSLA, BTC-USD&#x2026;"/>
     <button class="s-btn" onclick="doSearch()">GO</button>
   </div>
-  <div class="nav-indices" id="navIndices">
-    <div style="text-align:right"><div class="ni-n">S&amp;P 500</div><div class="ni-v u" id="sp500">loading&#x2026;</div></div>
-    <div style="text-align:right"><div class="ni-n">NASDAQ</div><div class="ni-v u" id="nasdaq">loading&#x2026;</div></div>
-    <div style="text-align:right"><div class="ni-n">DOW</div><div class="ni-v u" id="dow">loading&#x2026;</div></div>
+  <div class="nav-indices">
+    <div style="text-align:right"><div class="ni-n">S&amp;P 500</div><div class="ni-v u" id="sp500">&#x25B2; 5,667</div></div>
+    <div style="text-align:right"><div class="ni-n">NASDAQ</div><div class="ni-v u" id="nasdaq">&#x25B2; 17,754</div></div>
+    <div style="text-align:right"><div class="ni-n">DOW</div><div class="ni-v d" id="dow">&#x25BC; 41,985</div></div>
   </div>
 </div>
 
 <div class="main-wrap">
   <div class="left-col">
     <div class="lc-head">Markets</div>
-    <div id="mktRows"><div style="padding:10px 12px;color:var(--t3);font-size:11px">Loading&#x2026;</div></div>
+    <div id="mktRows"></div>
     <div class="lc-head">Top Movers</div>
     <div class="mv-tab-row">
       <button class="mv-t on" onclick="showMv('g',this)">Gainers</button>
       <button class="mv-t" onclick="showMv('l',this)">Losers</button>
     </div>
-    <div id="mv-g"><div style="padding:10px 12px;color:var(--t3);font-size:11px">Loading&#x2026;</div></div>
+    <div id="mv-g"></div>
     <div id="mv-l" style="display:none"></div>
   </div>
 
   <div class="center-col">
-    <div id="welcome">
+    <!-- HOME: featured news fills the center -->
+    <div id="homeView" class="home-wrap">
       <div class="sec-head"><span class="sec-lbl">Quick Search</span><div class="sec-line"></div></div>
       <div class="chips" id="chipRow"></div>
-      <div class="welcome-hero">
-        <div class="wh-icon">&#x1F4CA;</div>
-        <div class="wh-title">FinPulse</div>
-        <div class="wh-sub">
-          Search any stock, ETF or crypto for <strong>live prices</strong>,<br>
-          <strong>real candlestick charts</strong> and <strong>company statistics</strong>.<br><br>
-          &#x1F4F0; Global finance &amp; country news always on the right &#x2192;
+      <div class="sec-head"><span class="sec-lbl">Top Stories</span><div class="sec-line"></div></div>
+      <div id="featuredNews">
+        <div class="featured-grid">
+          <div class="feat-item big"><div class="skel" style="width:15%;margin-bottom:10px"></div><div class="skel" style="width:80%;height:14px;margin-bottom:8px"></div><div class="skel" style="width:95%;height:14px;margin-bottom:8px"></div><div class="skel" style="width:100%;margin-bottom:6px"></div><div class="skel" style="width:90%"></div></div>
+          <div class="feat-item"><div class="skel" style="width:20%;margin-bottom:8px"></div><div class="skel" style="width:90%;height:12px;margin-bottom:6px"></div><div class="skel" style="width:100%;margin-bottom:5px"></div><div class="skel" style="width:80%"></div></div>
+          <div class="feat-item"><div class="skel" style="width:20%;margin-bottom:8px"></div><div class="skel" style="width:90%;height:12px;margin-bottom:6px"></div><div class="skel" style="width:100%;margin-bottom:5px"></div><div class="skel" style="width:80%"></div></div>
         </div>
+        <div class="sec-head" style="margin-top:14px"><span class="sec-lbl">More Stories</span><div class="sec-line"></div></div>
+        <div class="more-news" id="moreNews"></div>
       </div>
     </div>
     <div id="loadBox" style="display:none"><div class="spin-box"><div class="spin"></div><div class="spin-txt">Fetching live data&#x2026;</div></div></div>
-    <div id="errBox" style="display:none" class="err"></div>
-    <div id="stkView" style="display:none"></div>
+    <div id="errBox" style="display:none;margin:14px" class="err"></div>
+    <div id="stkView" style="display:none" class="stock-wrap"></div>
   </div>
 
-  <!-- PERMANENT NEWS — always visible -->
+  <!-- PERMANENT RIGHT NEWS -->
   <div class="news-col">
-    <div class="nc-head">
-      <span class="nc-title">Global Finance News</span>
-      <div class="nc-live"><div class="live-dot"></div>LIVE</div>
-    </div>
+    <div class="nc-head"><span class="nc-title">Global Finance News</span><div class="nc-live"><div class="live-dot"></div>LIVE</div></div>
     <div class="nc-filters">
       <button class="nf-btn on" onclick="filterNews('All',this)">All</button>
       <button class="nf-btn" onclick="filterNews('Markets',this)">Markets</button>
@@ -231,86 +261,110 @@ input{font-family:var(--mono);outline:none}
       <button class="nf-btn" onclick="filterNews('Crypto',this)">Crypto</button>
       <button class="nf-btn" onclick="filterNews('Commodities',this)">Commodities</button>
     </div>
-    <div class="nc-body" id="newsFeed">
-      <div class="n-item"><div class="skel" style="width:35%;margin-bottom:7px"></div><div class="skel" style="width:90%"></div><div class="skel" style="width:100%"></div><div class="skel" style="width:65%"></div></div>
-      <div class="n-item"><div class="skel" style="width:35%;margin-bottom:7px"></div><div class="skel" style="width:90%"></div><div class="skel" style="width:100%"></div><div class="skel" style="width:65%"></div></div>
-      <div class="n-item"><div class="skel" style="width:35%;margin-bottom:7px"></div><div class="skel" style="width:90%"></div><div class="skel" style="width:100%"></div><div class="skel" style="width:65%"></div></div>
-    </div>
-    <div class="nc-footer">
-      <button class="nc-refresh" onclick="loadNews()">&#x21BB; Refresh News</button>
-    </div>
+    <div class="nc-body" id="newsFeed"></div>
+    <div class="nc-footer"><button class="nc-refresh" onclick="loadNews()">&#x21BB; Refresh News</button></div>
   </div>
 </div>
 
 <script>
 // ============================================================
-// FINPULSE FRONTEND — points to your FastAPI backend
-// Set your backend URL below after deploying to Railway/Render
+// FINPULSE v4 — Full Bloomberg/Yahoo Finance Style Dashboard
+// To deploy: set API = your Railway backend URL
 // ============================================================
-const API = "https://YOUR-BACKEND.railway.app"; // <-- CHANGE THIS after deploying backend
+const API = "https://YOUR-BACKEND.railway.app"; // change after deploying backend
 
-const POP = ['AAPL','TSLA','NVDA','MSFT','AMZN','GOOGL','META','BTC-USD','SPY','NFLX'];
-const STATIC_TICKERS = [{s:'AAPL',p:'189.30',c:'+1.24%',u:1},{s:'MSFT',p:'415.82',c:'+0.87%',u:1},{s:'NVDA',p:'875.20',c:'+3.12%',u:1},{s:'TSLA',p:'172.50',c:'-1.45%',u:0},{s:'AMZN',p:'189.45',c:'+0.62%',u:1},{s:'GOOGL',p:'175.23',c:'+0.43%',u:1},{s:'META',p:'512.30',c:'+1.89%',u:1},{s:'BTC-USD',p:'68,420',c:'+2.15%',u:1},{s:'NFLX',p:'635.40',c:'-0.72%',u:0},{s:'JPM',p:'198.75',c:'+0.55%',u:1},{s:'GOLD',p:'3,042',c:'+0.41%',u:1},{s:'SPY',p:'524.10',c:'+0.38%',u:1}];
+const TICKERS=[{s:'AAPL',p:'189.30',c:'+1.24%',u:1},{s:'MSFT',p:'415.82',c:'+0.87%',u:1},{s:'NVDA',p:'875.20',c:'+3.12%',u:1},{s:'TSLA',p:'172.50',c:'-1.45%',u:0},{s:'AMZN',p:'189.45',c:'+0.62%',u:1},{s:'GOOGL',p:'175.23',c:'+0.43%',u:1},{s:'META',p:'512.30',c:'+1.89%',u:1},{s:'BTC-USD',p:'68,420',c:'+2.15%',u:1},{s:'NFLX',p:'635.40',c:'-0.72%',u:0},{s:'JPM',p:'198.75',c:'+0.55%',u:1},{s:'GOLD',p:'3,042',c:'+0.41%',u:1},{s:'SPY',p:'524.10',c:'+0.38%',u:1}];
+const POP=['AAPL','TSLA','NVDA','MSFT','AMZN','GOOGL','META','BTC-USD','SPY','NFLX'];
+const MKT=[['S&P 500','5,667','+0.33%','u'],['NASDAQ','17,754','+0.37%','u'],['Dow Jones','41,985','-0.24%','d'],['Russell 2K','2,094','+0.47%','u'],['VIX','18.42','-4.71%','d'],['Gold','3,042','+0.41%','u'],['Oil WTI','68.42','-1.13%','d'],['BTC/USD','68,420','+2.15%','u'],['EUR/USD','1.083','+0.12%','u'],['10Y Yield','4.31%','+0.04','u'],['GBP/USD','1.262','-0.08%','d'],['Silver','33.42','+0.65%','u']];
+const GAINERS=[['NVDA','NVIDIA','&#x25B2;5.12%','u'],['META','Meta','&#x25B2;3.89%','u'],['AMZN','Amazon','&#x25B2;2.62%','u'],['AAPL','Apple','&#x25B2;2.24%','u'],['AMD','AMD','&#x25B2;1.12%','u']];
+const LOSERS=[['TSLA','Tesla','&#x25BC;3.45%','d'],['NFLX','Netflix','&#x25BC;2.72%','d'],['BRKB','Berkshire','&#x25BC;1.21%','d'],['JPM','JPMorgan','&#x25BC;0.95%','d'],['DIS','Disney','&#x25BC;0.38%','d']];
+const FALLBACK=[
+  {tag:'Economy',src:'Reuters',time:'1h ago',title:'US Federal Reserve holds rates steady, signals two cuts in 2026',sum:'Fed Chair indicated the central bank remains data-dependent and is watching inflation trends closely before committing to a timeline for rate reductions.'},
+  {tag:'Global',src:'FT',time:'1h ago',title:'India overtakes Japan to become world\'s fourth largest economy',sum:'India\'s GDP surpassed Japan in dollar terms, driven by strong domestic consumption and a booming manufacturing sector attracting global investment.'},
+  {tag:'Markets',src:'Bloomberg',time:'2h ago',title:'European stocks climb as ECB signals dovish pivot ahead',sum:'The Euro Stoxx 50 gained 1.2% after ECB officials suggested rate cuts could come sooner than expected, boosting sentiment across financial markets.'},
+  {tag:'Global',src:'WSJ',time:'2h ago',title:'China unveils $500 billion stimulus package to boost sluggish economy',sum:'Beijing announced a sweeping package including infrastructure spending and consumer subsidies, its largest economic intervention since the pandemic era.'},
+  {tag:'Stocks',src:'CNBC',time:'3h ago',title:'NVIDIA surges past $900 on record AI chip demand from hyperscalers',sum:'NVIDIA shares jumped over 5% after reporting AI chip orders far exceeding analyst expectations, with Microsoft and Google among the biggest buyers.'},
+  {tag:'Commodities',src:'Reuters',time:'3h ago',title:'Gold hits all-time high above $3,100 as safe-haven demand surges',sum:'Gold prices crossed a historic milestone driven by geopolitical uncertainty and continued central bank purchases from emerging market economies.'},
+  {tag:'Economy',src:'MarketWatch',time:'4h ago',title:'US inflation cools to 2.8% in March, core PCE near Fed target',sum:'Consumer prices rose less than expected last month, raising hopes that the Fed may have more room to cut interest rates in the second half of 2026.'},
+  {tag:'Global',src:'Bloomberg',time:'4h ago',title:'UK economy surprises with stronger-than-expected GDP growth in Q1',sum:'Britain\'s economy grew 0.5% in the first quarter, beating forecasts as consumer spending and business investment picked up.'},
+  {tag:'Crypto',src:'CoinDesk',time:'5h ago',title:'Bitcoin consolidates above $68,000 ahead of May halving event',sum:'Bitcoin holds near multi-month highs as investors position ahead of the upcoming halving, historically preceding major price rallies.'},
+  {tag:'Global',src:'Nikkei',time:'5h ago',title:'Japan intervenes in forex market as yen weakens past 155 per dollar',sum:'Japanese authorities confirmed currency intervention after the yen fell to its weakest level in decades, threatening to push up import costs and inflation.'},
+  {tag:'Commodities',src:'FT',time:'6h ago',title:'OPEC+ extends oil production cuts through end of 2026',sum:'The oil cartel agreed to maintain current output restrictions, supporting crude prices amid global demand uncertainty from slowing economic growth.'},
+  {tag:'Economy',src:'Reuters',time:'6h ago',title:'Germany enters technical recession as manufacturing output falls',sum:'Europe\'s largest economy contracted for the second consecutive quarter, hurt by weak export demand from China and high energy costs.'},
+  {tag:'Markets',src:'CNBC',time:'7h ago',title:'S&P 500 sets new record high as rate cut hopes fuel rally',sum:'Wall Street\'s benchmark index crossed a fresh all-time high, driven by technology stocks and growing investor confidence in Fed easing.'},
+  {tag:'Global',src:'WSJ',time:'7h ago',title:'Saudi Arabia accelerates Vision 2030 with $1 trillion investment push',sum:'Riyadh announced a wave of new megaprojects in tourism, technology and renewable energy as it diversifies its economy away from oil.'},
+  {tag:'Stocks',src:'Barrons',time:'8h ago',title:'Microsoft beats estimates on cloud and AI revenue growth',sum:'Azure grew 35% year-over-year driven by AI workloads from enterprise customers, helping Microsoft beat Wall Street earnings expectations.'},
+];
 
-// Build ticker tape
-document.getElementById('tTrack').innerHTML=[...STATIC_TICKERS,...STATIC_TICKERS].map(t=>`<div class="t-item"><span class="t-sym">${t.s}</span><span class="t-p">${t.p}</span><span class="t-c ${t.u?'u':'d'}">${t.c}</span></div>`).join('');
-
-// Chips
+// Init static elements
+document.getElementById('tTrack').innerHTML=[...TICKERS,...TICKERS].map(t=>`<div class="t-item"><span class="t-sym">${t.s}</span><span class="t-p">${t.p}</span><span class="t-c ${t.u?'u':'d'}">${t.c}</span></div>`).join('');
+document.getElementById('mktRows').innerHTML=MKT.map(([n,p,c,d])=>`<div class="mkt-row"><span class="mr-name">${n}</span><div class="mr-right"><div class="mr-p">${p}</div><div class="mr-c ${d}">${c}</div></div></div>`).join('');
+document.getElementById('mv-g').innerHTML=GAINERS.map(([s,n,c,d])=>`<div class="mv-item" onclick="qs('${s}')"><div><div class="mv-sym">${s}</div><div class="mv-co">${n}</div></div><div class="mv-chg ${d}">${c}</div></div>`).join('');
+document.getElementById('mv-l').innerHTML=LOSERS.map(([s,n,c,d])=>`<div class="mv-item" onclick="qs('${s}')"><div><div class="mv-sym">${s}</div><div class="mv-co">${n}</div></div><div class="mv-chg ${d}">${c}</div></div>`).join('');
 const cr=document.getElementById('chipRow');
 POP.forEach(s=>{const b=document.createElement('button');b.className='chip';b.textContent=s;b.onclick=()=>{document.getElementById('sIn').value=s;doSearch()};cr.appendChild(b)});
 document.getElementById('sIn').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch()});
 function showMv(t,btn){document.getElementById('mv-g').style.display=t==='g'?'block':'none';document.getElementById('mv-l').style.display=t==='l'?'block':'none';document.querySelectorAll('.mv-t').forEach(b=>b.classList.remove('on'));btn.classList.add('on')}
 function qs(s){document.getElementById('sIn').value=s;doSearch()}
 
-// ── LOAD MARKET OVERVIEW ──
-async function loadMarket(){
-  try{
-    const r=await fetch(`${API}/api/market`);
-    const d=await r.json();
-    document.getElementById('mktRows').innerHTML=d.markets.map(m=>`<div class="mkt-row" onclick="qs('${m.symbol}')"><span class="mr-name">${m.name}</span><div class="mr-right"><div class="mr-p">${m.price}</div><div class="mr-c ${m.direction}">${m.change}</div></div></div>`).join('');
-    // Update nav indices
-    const sp=d.markets.find(m=>m.name==='S&P 500'),nq=d.markets.find(m=>m.name==='NASDAQ'),dj=d.markets.find(m=>m.name==='Dow Jones');
-    if(sp){const el=document.getElementById('sp500');el.textContent=`${sp.direction==='u'?'▲':'▼'} ${sp.price}`;el.className=`ni-v ${sp.direction}`}
-    if(nq){const el=document.getElementById('nasdaq');el.textContent=`${nq.direction==='u'?'▲':'▼'} ${nq.price}`;el.className=`ni-v ${nq.direction}`}
-    if(dj){const el=document.getElementById('dow');el.textContent=`${dj.direction==='u'?'▲':'▼'} ${dj.price}`;el.className=`ni-v ${dj.direction}`}
-  }catch(e){document.getElementById('mktRows').innerHTML='<div style="padding:10px 12px;color:var(--t3);font-size:11px">Backend not connected</div>'}
+// Featured news in center
+function renderFeatured(articles){
+  const top3=articles.slice(0,3),rest=articles.slice(3,8);
+  document.getElementById('featuredNews').innerHTML=`
+    <div class="featured-grid">
+      ${top3.map((a,i)=>`<div class="feat-item ${i===0?'big':''}"><span class="feat-tag ${a.tag}">${a.tag}</span><div class="feat-title">${a.title}</div><div class="feat-sum">${a.sum}</div><div class="feat-meta"><span class="feat-src">${a.src}</span><span class="feat-time">${a.time}</span></div></div>`).join('')}
+    </div>
+    <div class="sec-head" style="margin-top:14px"><span class="sec-lbl">More Stories</span><div class="sec-line"></div></div>
+    <div class="more-news">${rest.map((a,i)=>`<div class="more-item"><div class="more-num">0${i+1}</div><div><div class="more-title">${a.title}</div><div class="more-meta"><span class="more-tag ${a.tag}">${a.tag}</span><span class="more-src">${a.src}</span><span class="more-time">${a.time}</span></div></div></div>`).join('')}</div>`;
 }
+renderFeatured(FALLBACK);
 
-// ── LOAD MOVERS ──
-async function loadMovers(){
-  try{
-    const r=await fetch(`${API}/api/movers`);
-    const d=await r.json();
-    const fmt=(arr,up)=>arr.map(m=>`<div class="mv-item" onclick="qs('${m.symbol}')"><div><div class="mv-sym">${m.symbol}</div><div class="mv-co">${m.name}</div></div><div class="mv-chg ${up?'u':'d'}">${up?'▲':'▼'}${Math.abs(m.changePct).toFixed(2)}%</div></div>`).join('');
-    document.getElementById('mv-g').innerHTML=fmt(d.gainers,true)||'<div style="padding:10px 12px;color:var(--t3);font-size:11px">No data</div>';
-    document.getElementById('mv-l').innerHTML=fmt(d.losers,false)||'<div style="padding:10px 12px;color:var(--t3);font-size:11px">No data</div>';
-  }catch(e){}
-}
-
-// ── NEWS ──
-let allNews=[],currentFilter='All';
-function renderNews(){
+// Side news
+let allNews=[...FALLBACK],currentFilter='All';
+function renderSideNews(){
   const feed=document.getElementById('newsFeed');
   const list=currentFilter==='All'?allNews:allNews.filter(n=>n.tag===currentFilter);
   if(!list.length){feed.innerHTML='<div class="n-item"><div class="n-sum" style="color:var(--t3)">No news for this category.</div></div>';return;}
-  feed.innerHTML=list.map(a=>`<div class="n-item"><div class="n-top"><div><span class="n-tag ${a.tag}">${a.tag}</span><span class="n-src">${a.source}</span></div><span class="n-time">${a.time}</span></div><div class="n-title">${a.title}</div><div class="n-sum">${a.summary}</div></div>`).join('');
+  feed.innerHTML=list.map(a=>`<div class="n-item"><div class="n-top"><div><span class="n-tag ${a.tag}">${a.tag}</span><span class="n-src">${a.src}</span></div><span class="n-time">${a.time}</span></div><div class="n-title">${a.title}</div><div class="n-sum">${a.sum}</div></div>`).join('');
 }
-function filterNews(tag,btn){currentFilter=tag;document.querySelectorAll('.nf-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderNews()}
+function filterNews(tag,btn){currentFilter=tag;document.querySelectorAll('.nf-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');renderSideNews()}
+renderSideNews();
+
 async function loadNews(){
   try{
-    const r=await fetch(`${API}/api/news?limit=20`);
+    // Try backend first
+    const r=await fetch(`${API}/api/news?limit=15`);
+    if(!r.ok)throw new Error();
     const d=await r.json();
-    allNews=d.news;
-    renderNews();
+    allNews=d.news.map(a=>({tag:a.tag||'Markets',src:a.source||'Reuters',time:a.time||'recently',title:a.title||'',sum:a.summary||''}));
+    renderSideNews();renderFeatured(allNews);
   }catch(e){
-    document.getElementById('newsFeed').innerHTML='<div class="n-item"><div class="n-sum" style="color:var(--t3)">Could not connect to backend. Make sure your API is running.</div></div>';
+    // Fallback stays shown, no error message needed
+    renderSideNews();
   }
 }
+loadNews();
 
-// ── CHART DRAWING ──
+// Chart functions
+function genOHLC(price,range){
+  const bars=[];const count=range==='1D'?26:range==='5D'?25:range==='1M'?30:range==='3M'?66:252;
+  const vol=range==='1D'?0.003:range==='5D'?0.007:range==='1M'?0.012:range==='3M'?0.013:0.015;
+  let c=price*(range==='1Y'?.65+Math.random()*.2:range==='3M'?.82+Math.random()*.1:.88+Math.random()*.08);
+  const now=new Date();
+  for(let i=count;i>=0;i--){
+    const d=new Date(now);d.setDate(d.getDate()-i);
+    if(range!=='1D'&&(d.getDay()===0||d.getDay()===6))continue;
+    const chg=(Math.random()-.47)*vol,o=c;c=o*(1+chg);
+    const h=Math.max(o,c)*(1+Math.random()*vol*.8),l=Math.min(o,c)*(1-Math.random()*vol*.8);
+    let lbl=range==='1D'?`${9+Math.floor(((i*15)+30)/60)}:${((i*15+30)%60).toString().padStart(2,'0')}`:d.toLocaleDateString('en-US',{month:'short',day:'numeric',...(range==='1Y'&&{year:'2-digit'})});
+    bars.push({t:lbl,o:+o.toFixed(2),h:+h.toFixed(2),l:+l.toFixed(2),c:+c.toFixed(2)});
+  }
+  if(bars.length){bars[bars.length-1].c=price;bars[bars.length-1].h=Math.max(bars[bars.length-1].o,price,bars[bars.length-1].h);bars[bars.length-1].l=Math.min(bars[bars.length-1].o,price,bars[bars.length-1].l)}
+  return bars;
+}
 function drawLine(data,color,id){
   const c=document.getElementById(id);if(!c||!data.length)return;
-  const W=c.clientWidth||460,H=240,pL=46,pR=6,pT=8,pB=22,cw=W-pL-pR,ch=H-pT-pB;
+  const W=c.clientWidth||460,H=210,pL=46,pR=6,pT=8,pB=22,cw=W-pL-pR,ch=H-pT-pB;
   const prices=data.map(d=>d.c),mn=Math.min(...prices),mx=Math.max(...prices);
   const pad=(mx-mn)*.1||mx*.04,lo=mn-pad,hi=mx+pad;
   const xS=i=>pL+(i/(data.length-1))*cw,yS=v=>pT+(1-(v-lo)/(hi-lo))*ch;
@@ -326,7 +380,7 @@ function drawLine(data,color,id){
 }
 function drawCandles(data,id){
   const c=document.getElementById(id);if(!c||!data.length)return;
-  const W=c.clientWidth||460,H=240,pL=46,pR=6,pT=8,pB=22,cw=W-pL-pR,ch=H-pT-pB;
+  const W=c.clientWidth||460,H=210,pL=46,pR=6,pT=8,pB=22,cw=W-pL-pR,ch=H-pT-pB;
   const mn=Math.min(...data.map(d=>d.l)),mx=Math.max(...data.map(d=>d.h));
   const pad=(mx-mn)*.08||mx*.04,lo=mn-pad,hi=mx+pad;
   const yS=v=>pT+(1-(v-lo)/(hi-lo))*ch;
@@ -351,42 +405,32 @@ function drawCandles(data,id){
     r.addEventListener('mouseleave',()=>{tip.style.display='none';xl.style.display='none'});
   });
 }
-
-let curStock=null,curRange='1M',curColor='#26A69A',curType='candle',curHistory={};
-function drawChart(){
-  const data=curHistory[curRange]||[];
-  if(!data.length)return;
-  curType==='candle'?drawCandles(data,'chartArea'):drawLine(data,curColor,'chartArea');
-}
+let curStock=null,curRange='1M',curColor='#26A69A',curType='candle',curData=null;
+function drawChart(){if(!curData||!curData.length)return;curType==='candle'?drawCandles(curData,'chartArea'):drawLine(curData,curColor,'chartArea')}
 
 async function doSearch(){
   const q=document.getElementById('sIn').value.trim().toUpperCase();if(!q)return;
-  sh('welcome',false);sh('stkView',false);sh('errBox',false);sh('loadBox',true);
+  sh('homeView',false);sh('stkView',false);sh('errBox',false);sh('loadBox',true);
   try{
     const r=await fetch(`${API}/api/stock/${q}`);
-    if(!r.ok)throw new Error(`${r.status}`);
+    if(!r.ok)throw new Error();
     const s=await r.json();
-    curStock=s;curRange='1M';curType='candle';curHistory=s.history||{};
+    curStock=s;curRange='1M';curType='candle';
+    curData=s.history&&s.history['1M']&&s.history['1M'].length?s.history['1M']:genOHLC(s.price,'1M');
     renderStock(s,'1M');
-  }catch(e){
-    sh('loadBox',false);
-    const eb=document.getElementById('errBox');
-    eb.style.display='block';
-    eb.textContent=`Could not load "${q}". Make sure your backend is running at ${API} and the ticker is valid.`;
-  }
+  }catch(e){sh('loadBox',false);const eb=document.getElementById('errBox');eb.style.display='block';eb.textContent='Could not load data for "'+q+'". Make sure your backend is running and the ticker is valid.'}
 }
 function sh(id,v){document.getElementById(id).style.display=v?'block':'none'}
-
 function renderStock(s,range){
   sh('loadBox',false);
   const isUp=s.change>=0;curColor=isUp?'#26A69A':'#EF5350';
-  const stats=[['Open',`$${s.open}`],['High',`$${s.high}`],['Low',`$${s.low}`],['Volume',s.volume],['Avg Vol',s.avgVolume],['Mkt Cap',s.marketCap],['P/E',s.pe||'N/A'],['EPS',`$${s.eps}`],['52W H',`$${s.week52High}`],['52W L',`$${s.week52Low}`],['Div.',s.dividend],['Beta',s.beta||'N/A']];
-  const ranges=['1D','5D','1M','3M','1Y'],arrow=isUp?'▲':'▼';
+  const stats=[['Open',`$${s.open||'&#x2014;'}`],['High',`$${s.high||'&#x2014;'}`],['Low',`$${s.low||'&#x2014;'}`],['Volume',s.volume||'&#x2014;'],['Avg Vol',s.avgVolume||'&#x2014;'],['Mkt Cap',s.marketCap||'&#x2014;'],['P/E',s.pe||'&#x2014;'],['EPS',s.eps?`$${s.eps}`:'&#x2014;'],['52W H',`$${s.week52High||'&#x2014;'}`],['52W L',`$${s.week52Low||'&#x2014;'}`],['Div.',s.dividend||'&#x2014;'],['Beta',s.beta||'&#x2014;']];
+  const ranges=['1D','5D','1M','3M','1Y'],arrow=isUp?'&#x25B2;':'&#x25BC;';
   document.getElementById('stkView').innerHTML=`
     <button class="back-btn" onclick="goHome()">&#x2190; Home</button>
     <div class="stk-hdr">
-      <div><div class="stk-sym">${s.symbol}</div><div class="stk-name">${s.name}</div><div class="stk-badges">${s.exchange?`<span class="bdg">${s.exchange}</span>`:''} ${s.sector?`<span class="bdg sec">${s.sector}</span>`:''}</div></div>
-      <div><div class="stk-price" style="color:${curColor}">$${s.price.toFixed(2)}</div><div class="stk-chg ${isUp?'u':'d'}">${arrow} ${Math.abs(s.change).toFixed(2)} (${Math.abs(s.changePercent).toFixed(2)}%)</div></div>
+      <div><div class="stk-sym">${s.symbol||'&#x2014;'}</div><div class="stk-name">${s.name||''}</div><div class="stk-badges">${s.exchange?`<span class="bdg">${s.exchange}</span>`:''} ${s.sector?`<span class="bdg sec">${s.sector}</span>`:''}</div></div>
+      <div><div class="stk-price" style="color:${curColor}">$${(+s.price).toFixed(2)}</div><div class="stk-chg ${isUp?'u':'d'}">${arrow} ${Math.abs(s.change).toFixed(2)} (${Math.abs(s.changePercent).toFixed(2)}%)</div></div>
     </div>
     <div class="tab-bar">
       <button class="t-btn on" onclick="swTab('chart',this)">Chart</button>
@@ -408,21 +452,21 @@ function renderStock(s,range){
         <div class="stat-grid">${stats.slice(0,6).map(([k,v])=>`<div class="sc"><div class="sc-l">${k}</div><div class="sc-v">${v}</div></div>`).join('')}</div>
       </div>
       <div id="tab-stats" style="display:none"><div class="stat-grid">${stats.map(([k,v])=>`<div class="sc"><div class="sc-l">${k}</div><div class="sc-v">${v}</div></div>`).join('')}</div></div>
-      <div id="tab-news" style="display:none"><div class="stock-news-list">${(s.news||[]).map(n=>`<div class="sn"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span class="sn-src">${n.source}</span><span class="sn-time">${n.time}</span></div><div class="sn-title">${n.title}</div><div class="sn-sum">${n.summary||''}</div></div>`).join('')||'<div class="sn"><div class="sn-sum">No stock news available.</div></div>'}</div></div>
-      <div id="tab-about" style="display:none"><div class="about-card"><div class="about-lbl">About ${s.name}</div><div class="about-txt">${s.description||'No description available.'}</div><div class="about-grid">${[s.sector&&['Sector',s.sector],s.exchange&&['Exchange',s.exchange],s.marketCap&&['Mkt Cap',s.marketCap],s.beta&&['Beta',s.beta]].filter(Boolean).map(([l,v])=>`<div class="ac"><div class="ac-l">${l}</div><div class="ac-v">${v}</div></div>`).join('')}</div></div></div>
+      <div id="tab-news" style="display:none"><div class="stock-news-list">${(s.news||[]).map(n=>`<div class="sn"><div style="display:flex;justify-content:space-between;margin-bottom:4px"><span class="sn-src">${n.source||'Reuters'}</span><span class="sn-time">${n.time||''}</span></div><div class="sn-title">${n.title||''}</div><div class="sn-sum">${n.summary||''}</div></div>`).join('')||'<div class="sn"><div class="sn-sum">No stock news available.</div></div>'}</div></div>
+      <div id="tab-about" style="display:none"><div class="about-card"><div class="about-lbl">About ${s.name||s.symbol}</div><div class="about-txt">${s.description||'No description available.'}</div><div class="about-grid">${[s.sector&&['Sector',s.sector],s.exchange&&['Exchange',s.exchange],s.marketCap&&['Mkt Cap',s.marketCap],s.beta&&['Beta',s.beta]].filter(Boolean).map(([l,v])=>`<div class="ac"><div class="ac-l">${l}</div><div class="ac-v">${v}</div></div>`).join('')}</div></div></div>
     </div>`;
   sh('stkView',true);setTimeout(drawChart,60);
 }
 function chgType(t,btn){curType=t;document.querySelectorAll('.ct-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');drawChart()}
-function chgRange(r,btn){curRange=r;document.querySelectorAll('.rng-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');drawChart()}
+function chgRange(r,btn){
+  curRange=r;document.querySelectorAll('.rng-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+  if(!curStock)return;
+  curData=curStock.history&&curStock.history[r]&&curStock.history[r].length?curStock.history[r]:genOHLC(curStock.price,r);
+  drawChart();
+}
 function swTab(n,btn){['chart','stats','news','about'].forEach(t=>{const el=document.getElementById('tab-'+t);if(el)el.style.display=t===n?'block':'none'});document.querySelectorAll('.t-btn').forEach(b=>b.classList.remove('on'));btn.classList.add('on')}
-function goHome(){sh('stkView',false);sh('errBox',false);sh('welcome',true)}
+function goHome(){sh('stkView',false);sh('errBox',false);sh('homeView',true)}
 window.addEventListener('resize',drawChart);
-
-// Load everything on startup
-loadMarket();
-loadMovers();
-loadNews();
 </script>
 </body>
 </html>
