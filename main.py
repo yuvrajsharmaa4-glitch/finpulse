@@ -20,7 +20,7 @@ app = FastAPI(title="FinPulse API", version="1.0.0")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Replace with your Netlify URL in production e.g. ["https://your-app.netlify.app"]
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["*"],
 )
 
