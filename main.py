@@ -255,7 +255,9 @@ def get_market_overview():
     result = []
     for name, sym in symbols.items():
         try:
-            t    = yf.Ticker(sym)
+            session = requests.Session()
+            session.headers.update({'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'})
+            t    = yf.Ticker(sym, session=session)
             info = t.fast_info
             price      = round(float(info.last_price or 0), 2)
             prev       = round(float(info.previous_close or price), 2)
@@ -280,7 +282,7 @@ def get_movers():
     gainers, losers = [], []
     for sym in symbols:
         try:
-            t    = yf.Ticker(sym)
+            
             info = t.fast_info
             price   = round(float(info.last_price or 0), 2)
             prev    = round(float(info.previous_close or price), 2)
