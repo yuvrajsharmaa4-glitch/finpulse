@@ -108,7 +108,7 @@ input{font-family:var(--mono);outline:none}
 .chip:hover{background:var(--gold);color:#000;border-color:var(--gold)}
 .featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--b1);border-radius:8px;overflow:hidden;border:1px solid var(--b1);margin-bottom:14px}
 .feat-item{background:var(--s1);padding:16px;cursor:pointer;transition:background .12s}
-.feat-item:hover{background:var(--s2)}
+.feat-item:hover{background:var(--s2);cursor:pointer}
 .feat-item.big{grid-column:1/-1;border-bottom:1px solid var(--b1);padding:20px}
 .feat-tag{font-size:9px;padding:2px 7px;border-radius:3px;font-weight:700;letter-spacing:.5px;display:inline-block;margin-bottom:8px}
 .feat-tag.Economy{background:#1A1800;border:1px solid #3A3000;color:#D4B856}
@@ -308,14 +308,14 @@ function showMv(t,btn){document.getElementById('mv-g').style.display=t==='g'?'bl
 function qs(s){document.getElementById('sIn').value=s;doSearch()}
 
 // Featured news in center
-function renderFeatured(articles){
+<div class="feat-item ${i===0?'big':''}">
   const top3=articles.slice(0,3),rest=articles.slice(3,8);
   document.getElementById('featuredNews').innerHTML=`
     <div class="featured-grid">
-      ${top3.map((a,i)=>`<div class="feat-item ${i===0?'big':''}"><span class="feat-tag ${a.tag}">${a.tag}</span><div class="feat-title">${a.title}</div><div class="feat-sum">${a.sum}</div><div class="feat-meta"><span class="feat-src">${a.src}</span><span class="feat-time">${a.time}</span></div></div>`).join('')}
+      ${top3.map((a,i)=>`<div class="feat-item ${i===0?'big':''}" onclick="window.open('https://www.google.com/search?q='+encodeURIComponent(a.title),'_blank')"><span class="feat-tag ${a.tag}">${a.tag}</span><div class="feat-title">${a.title}</div><div class="feat-sum">${a.sum}</div><div class="feat-meta"><span class="feat-src">${a.src}</span><span class="feat-time">${a.time}</span></div></div>`).join('')}
     </div>
     <div class="sec-head" style="margin-top:14px"><span class="sec-lbl">More Stories</span><div class="sec-line"></div></div>
-    <div class="more-news">${rest.map((a,i)=>`<div class="more-item"><div class="more-num">0${i+1}</div><div><div class="more-title">${a.title}</div><div class="more-meta"><span class="more-tag ${a.tag}">${a.tag}</span><span class="more-src">${a.src}</span><span class="more-time">${a.time}</span></div></div></div>`).join('')}</div>`;
+    <div class="more-news">${rest.map((a,i)=>`<div class="more-item" onclick="window.open('https://www.google.com/search?q='+encodeURIComponent(a.title),'_blank')"><div class="more-num">0${i+1}</div><div><div class="more-title">${a.title}</div><div class="more-meta"><span class="more-tag ${a.tag}">${a.tag}</span><span class="more-src">${a.src}</span><span class="more-time">${a.time}</span></div></div></div>`).join('')}</div>`;
 }
 renderFeatured(FALLBACK);
 
